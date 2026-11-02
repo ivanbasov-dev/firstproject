@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151716">
+  <title>{% block title %}Любимые фильмы — личный киножурнал{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<a class="skip-link" href="#main">Перейти к содержимому</a>
+<header class="site-header wrap">
+  <a class="brand" href="{{ url_for('index_view') }}"><span class="brand-icon" aria-hidden="true">◫</span> Любимые фильмы<span class="brand-dot">.</span></a>
+  <nav aria-label="Основная навигация"><a href="/#collection">Подборка</a><a href="/#search">Поиск</a><a class="nav-review" href="/#review">Написать отзыв <span aria-hidden="true">→</span></a></nav>
+</header>
+<main id="main" class="wrap">{% block content %}{% endblock %}</main>
+<footer class="wrap"><a class="brand" href="/">Любимые фильмы<span class="brand-dot">.</span></a><p>Личный киножурнал. О кино, которое остаётся с нами.</p><a href="#main">Наверх ↑</a></footer>
+</body>
+</html>
